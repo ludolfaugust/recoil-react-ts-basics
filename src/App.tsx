@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
+import {RecoilRoot} from 'recoil';
 import './App.css';
+import GenericTypes from './typescript/generics/GenericTypes'
+import IndexTodo from './typescript/todoapp/IndexTodo';
+import CharacterCount from './recoil/CharacterCount';
+import TodoListRecoil from './recoil/TodoListRecoil';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <RecoilRoot>
+        <IndexTodo />
+        <GenericTypes />        
+        <CharacterCount />
+        <TodoListRecoil />
+      </RecoilRoot>
+     
     </div>
   );
 }
