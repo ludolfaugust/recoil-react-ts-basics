@@ -3,12 +3,14 @@ import {useRecoilValue} from 'recoil';
 import charCountState from '../../atomAndSelector/selector';
 import changeColorState from '../../atomAndSelector/selectorColor';
 import _shuffle from 'lodash';
+import { ArryTypes } from './ArryTypes';
+
 
 const GenericTypes = () => {
     const count = useRecoilValue(charCountState);
     const color = useRecoilValue(changeColorState)
 
-    console.log(color);
+    
 
     interface Lengthy{
         length: number;
@@ -56,6 +58,7 @@ return (
         <h3>GenericTypes</h3>
         <button style={{backgroundColor: color ? 'red' : 'blue'}}><h4>{count}</h4></button>
         <h4>Use Recoil Value CharCounter</h4> 
+        <ArryTypes />
     </div>
   )
 }
